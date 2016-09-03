@@ -1,0 +1,32 @@
+<ion-view view-title="localStorage">
+  <ion-nav-bar class="bar-calm">
+
+  </ion-nav-bar>
+  <ion-content class="padding" align='center'>
+    <div>
+        <br><br><br>
+        <p ng-repeat="image in ctrlImage track by $index">   
+          <img class="capture" src="img/{{image}}.jpg" width="200px" ng-click='randomeII()' style="border-radius:50%;">
+          <br> 
+        </p> 
+
+        <div class="item-text-wrap" ng-repeat="username in storedData track by $index">
+          <h3 ng-click='randomeII()'>{{username}}</h3>
+        </div>
+        <br><br>
+
+        <div class="item item-input-inset">
+          <label class="item-input-wrapper">
+            <input type="text" placeholder="회원아이디를 입력해주세요." ng-model="ctrlData.newPhrase.name" maxlength="20">
+          </label>
+          <button class="button button-small" ng-click="addData()">
+            Submit
+          </button>
+        </div> 
+        <br><br>
+        <div style='padding:30px'>이용방법: 본인 아이디를 클릭하면 사진을 바꿀 수 있습니다.</div>
+    </div>
+  </ion-content>
+</ion-view>
+
+ 

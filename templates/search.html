@@ -1,0 +1,39 @@
+<ion-view view-title="Search">
+  <ion-content>
+ 
+ 
+	<div>  
+ 
+	ede
+
+       <table ng-repeat="store in nickName | limitTo:4" >
+       		<tr>
+       			<td><a href="/playlists/{{store.$id}}">{{store.title}}</a> {{store.image1}} - {{store.lat}} - {{store.lng}}          </td>
+       		</tr>
+       </table> 
+
+
+
+
+		<div ng-click='logout()'>logout</div>
+
+	    <div class="alert alert-info"> 
+	        <input type="text" ng-model='OriginUser' placeholder="Your name "/ size="10"> <br><br>
+	        <input type="text" ng-model='newThreadTitle' placeholder="New title..."/ size="20"> <br><br>
+	        <textarea name="random value" cols="30" rows="5" ng-model='Text12' placeholder="New text..."></textarea>
+	        <br><br>
+	        <button ng-click="addThread()" class="btn btn-info">Add thread</button>   
+	    </div> 
+		
+
+
+
+
+
+
+
+
+	</div> 
+    <ion-infinite-scroll on-infinite="addItems()" ng-if="maxItems()"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>
